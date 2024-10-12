@@ -107,7 +107,7 @@ export default {
   }
 }
 </script>
-<style>
+<style scoped>
     body {
         font-family: Arial, sans-serif;
         padding: 20px;

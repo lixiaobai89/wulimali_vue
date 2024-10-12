@@ -3,6 +3,7 @@ import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import Login from '../views/Login.vue'
 import Register from '../views/Register.vue'
+import Shanyang from '../views/Shanyang.vue'
 import CompoundInterestCalculator from '../views/CompoundInterestCalculator.vue'
 import LoanAmortizationCalculator from '../views/LoanAmortizationCalculator.vue'
 
@@ -18,6 +19,11 @@ const routes = [
     path: '/Register',
     name: 'Register',
     component: Register
+  },
+  {
+    path: '/Shanyang',
+    name: 'Shanyang',
+    component: Shanyang
   },
   {
     path: '/Home',

@@ -54,42 +54,42 @@
         }
     }
 </script>
-<!-- <style>
-    body {
-        font-family: Arial, sans-serif;
-        margin: 20px;
-    }
-    .container {
-        max-width: 400px;
-        margin: auto;
-    }
-    label, input, select {
-        display: block;
-        margin-bottom: 10px;
-        font-size: 1.1em;
-    }
-    input, select {
-        width: 100%;
-        padding: 8px;
-        font-size: 1.1em;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-    }
-    button {
-        padding: 12px;
-        background-color: #28a745;
-        color: white;
-        font-size: 1.1em;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        width: 100%;
-    }
-    button:hover {
-        background-color: #218838;
-    }
-    .result {
-        margin-top: 20px;
-        font-size: 1.1em;
-    }
-</style> -->
+<style scoped>
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+.container {
+    max-width: 400px;
+    margin: auto;
+}
+label, input, select {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 1.1em;
+}
+input, select {
+    width: 100%;
+    padding: 8px;
+    font-size: 1.1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+button {
+    padding: 12px;
+    background-color: #28a745;
+    color: white;
+    font-size: 1.1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+}
+button:hover {
+    background-color: #218838;
+}
+.result {
+    margin-top: 20px;
+    font-size: 1.1em;
+}
+</style>

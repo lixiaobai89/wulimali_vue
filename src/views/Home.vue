@@ -1,4 +1,5 @@
 <template>
+<div>
   <div class="home">
     <el-row>
       <el-col :span="4">
@@ -13,6 +14,11 @@
               >CompoundInterestCalculator</router-link
             >
           </el-menu-item>
+          <el-menu-item index="3">
+            <router-link to="/Shanyang"
+              >Shanyang</router-link
+            >
+          </el-menu-item>
         </el-menu>
       </el-col>
       <el-col :span="20">
@@ -21,7 +27,7 @@
     </el-row>
     <HelloWorld msg="Welcome to Your Vue.js App" />
   </div>
-  
+</div>
 </template>
 
 <script>
@@ -35,3 +41,5 @@
 //   }
 // }
 </script>
+<style scoped>
+</style>

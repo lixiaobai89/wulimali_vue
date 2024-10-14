@@ -9,7 +9,6 @@ import VueAxios from 'vue-axios'
 import i18n from "./i18n"
 import CountryFlag from 'vue-country-flag';
 import LanguageSwitcher from './components/LanguageSwitcher';
-import LanguageSwitcher2 from './components/LanguageSwitcher2';
 
 Vue.prototype.$baseUrl = process.env.VUE_APP_BASEURL
 
@@ -18,7 +17,6 @@ Vue.use(ElementUI)
 Vue.use(VueAxios, axios)
 Vue.use(CountryFlag)
 Vue.component('LanguageSwitcher', LanguageSwitcher)
-Vue.component('LanguageSwitcher2', LanguageSwitcher2)
 
 new Vue({
   router,

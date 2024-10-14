@@ -25,7 +25,7 @@
         <router-view></router-view>
       </el-col>
     </el-row>
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+    <!-- <HelloWorld msg="Welcome to Your Vue.js App" /> -->
   </div>
 </div>
 </template>

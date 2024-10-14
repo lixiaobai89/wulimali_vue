@@ -31,7 +31,6 @@ export default {
   //   CountryFlag
   // },
   mounted() {
-    console.info(this.$i18n.t('table.logBut'))
   },
   name: 'Login',
   data() {
@@ -59,6 +58,7 @@ export default {
                 message: '登录成功',
                 type: 'success'
                 });
+                sessionStorage.setItem('token', data.content);
                 this.$router.push({path:'/Home'})
             }
         })

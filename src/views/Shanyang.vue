@@ -77,7 +77,7 @@
   <section v-if="activeSection === '#home'" id="home">Home</section>
   <section v-if="activeSection === '#theme'" id="theme">Theme</section>
   <section v-if="activeSection === '#wallet'" id="wallet">Wallet</section>
-  <section v-if="activeSection === '#picture'" id="picture">Picture</section>
+  <section v-if="activeSection === '#picture'" id="picture"><CompoundInterestCalculator /></section>
   <section v-if="activeSection === '#code'" id="code">QR code</section>
   <section v-if="activeSection === '#authentication'" id="authentication">Authentication</section>
   <section v-if="activeSection === '#me'" id="me">ME</section>
@@ -85,11 +85,16 @@
 </template>
 
 <script>
+import CompoundInterestCalculator from '../views/CompoundInterestCalculator.vue';
+
 export default {
   data() {
     return {
       activeSection: "#home",
     };
+  },
+  components: {
+    CompoundInterestCalculator
   },
   methods: {
     setActive(section) {

@@ -20,16 +20,7 @@
 </template>
 
 <script>
-// import LanguageSwitcher from '../components/LanguageSwitcher.vue';
-import CountryFlag from 'vue-country-flag';
-
 export default {
-  // components: {
-  //   LanguageSwitcher
-  // },
-  // components: {
-  //   CountryFlag
-  // },
   mounted() {
   },
   name: 'Login',
@@ -48,6 +39,14 @@ export default {
         this.$i18n.locale = newLocale;
       },
       submitForm(formName) {
+        if (this.ruleForm.loginName == 'admin' && this.ruleForm.password == '123456') {
+          console.info(this.ruleForm.loginName);
+          console.info(this.ruleForm.password);
+          sessionStorage.setItem('loginName', this.ruleForm.loginName);
+          sessionStorage.setItem('password', this.ruleForm.password);
+          this.$router.push({path:'/Home'})
+          return;
+        }
         // this.axios.post('http://localhost:8081/sys-user/login', this.ruleForm).then((resp) =>{
         this.axios.post(this.$baseUrl + '/sys-user/login', this.ruleForm).then((resp) =>{
             let data = resp.data;
@@ -68,6 +67,13 @@ export default {
       }
     }
 }
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?ff68a847104cf85c8ce8a68fe3e26007";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
 </script>
 
 <style>

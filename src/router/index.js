@@ -6,6 +6,8 @@ import Register from '../views/Register.vue'
 import Shanyang from '../views/Shanyang.vue'
 import CompoundInterestCalculator from '../views/CompoundInterestCalculator.vue'
 import LoanAmortizationCalculator from '../views/LoanAmortizationCalculator.vue'
+import Finance from '../views/Finance.vue'
+import Medicine from '../views/Medicine.vue'
 import axios from 'axios' // 引入全局 axios 实例
 
 
@@ -61,6 +63,16 @@ const routes = [
     path: '/LoanAmortizationCalculator',
     name: 'LoanAmortizationCalculator',
     component: LoanAmortizationCalculator
+  },
+  {
+    path: '/Finance',
+    name: 'Finance',
+    component: Finance
+  },
+  {
+    path: '/Medicine',
+    name: 'Medicine',
+    component: Medicine
   }
 ]
 
@@ -70,14 +82,19 @@ const router = new VueRouter({
 })
 
 router.beforeEach((to, from, next) => {
+  let loginName = sessionStorage.getItem('loginName');
+  let password = sessionStorage.getItem('password');
+  //管理员直接登录
+  if (loginName == 'admin' && password == '123456') {
+    next();
+  }
   const token = sessionStorage.getItem('token');
   //跳过不需要守卫的
   if (to.meta.requiresAuth === false) {
     next();
   } else {
     if (!token || token == 'undefined') {
-      //token不存在则去登录
-      next({ path: '/' });
+      return;
     } else {
       //验证token
       axios.post(`${process.env.VUE_APP_BASEURL}/sys-user/auth/${token}`).then((resp) => {
@@ -89,7 +106,7 @@ router.beforeEach((to, from, next) => {
           next();
         }
         else {
-          next({ path: '/' });
+          return;
         }
       })
     }

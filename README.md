@@ -1,4 +1,4 @@
-# lxb
+# wulimali_vue
 
 ## Project setup
 ```

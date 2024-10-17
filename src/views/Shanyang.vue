@@ -36,7 +36,7 @@
           <div class="text">Wallet</div>
         </a>
       </li>
-      <li :class="{ active: activeSection === '#picture' }" @click="setActive('#picture')">
+      <li :class="{ active: activeSection === '#loan' }" @click="setActive('#loan')">
         <a href="#">
           <div class="icon">
             <i class="iconfont icon-tupian"></i>
@@ -44,7 +44,7 @@
           <div class="text">Picture</div>
         </a>
       </li>
-      <li :class="{ active: activeSection === '#code' }" @click="setActive('#code')">
+      <li :class="{ active: activeSection === '#comp' }" @click="setActive('#comp')">
         <a href="#">
           <div class="icon">
             <i class="iconfont icon-erweima"></i>
@@ -77,8 +77,8 @@
   <section v-if="activeSection === '#home'" id="home">Home</section>
   <section v-if="activeSection === '#theme'" id="theme">Theme</section>
   <section v-if="activeSection === '#wallet'" id="wallet">Wallet</section>
-  <section v-if="activeSection === '#picture'" id="picture"><CompoundInterestCalculator /></section>
-  <section v-if="activeSection === '#code'" id="code">QR code</section>
+  <section v-if="activeSection === '#loan'" id="loan"><LoanAmortizationCalculator /></section>
+  <section v-if="activeSection === '#comp'" id="comp"><CompoundInterestCalculator /></section>
   <section v-if="activeSection === '#authentication'" id="authentication">Authentication</section>
   <section v-if="activeSection === '#me'" id="me">ME</section>
   </div>
@@ -86,6 +86,7 @@
 
 <script>
 import CompoundInterestCalculator from '../views/CompoundInterestCalculator.vue';
+import LoanAmortizationCalculator from '../views/LoanAmortizationCalculator.vue';
 
 export default {
   data() {
@@ -94,7 +95,8 @@ export default {
     };
   },
   components: {
-    CompoundInterestCalculator
+    CompoundInterestCalculator,
+    LoanAmortizationCalculator
   },
   methods: {
     setActive(section) {

@@ -80,7 +80,7 @@ export default {
     },
     methods: {
       submitForm(formName) {
-        this.axios.post(this.$baseUrl + '/sys-user/register', this.ruleForm).then((resp) =>{
+        this.axios.post(this.$baseUrl_api + '/sys-user/register', this.ruleForm).then((resp) =>{
             let data = resp.data;
             if(data.success){
                 this.ruleForm = {};

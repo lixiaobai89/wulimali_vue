@@ -41,7 +41,7 @@
           <div class="icon">
             <i class="iconfont icon-tupian"></i>
           </div>
-          <div class="text">Picture</div>
+          <div class="text">Loan</div>
         </a>
       </li>
       <li :class="{ active: activeSection === '#comp' }" @click="setActive('#comp')">
@@ -49,7 +49,7 @@
           <div class="icon">
             <i class="iconfont icon-erweima"></i>
           </div>
-          <div class="text">QR code</div>
+          <div class="text">Comp</div>
         </a>
       </li>
       <li :class="{ active: activeSection === '#authentication' }" @click="setActive('#authentication')">
